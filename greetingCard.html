@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>greeting card</title>
+</head>
+<body  onload="pageAnime()">
+  <main>
+    <header>
+      <h1>Greeting card for new years</h1>
+      <div id="header-container">
+        <nav id="header-nav">
+          <a href="#front" onclick="frontSide()" title="front side">front</a>
+          <a href="#inside" onclick="insideSide()" title="inside side">inside</a>
+          <a hrer="#back" onclick="backSide()" title="back side">back</a>
+        </nav>
+      </div>
+    </header>
+    <div id="container">
+      <div id="front" class="main-div">
+        <div id="front-container">
+          <div id="front-page">
+            <img id="img-f" src="https://png.pngitem.com/pimgs/s/630-6300063_happy-new-year-clock-gold-clip-art-image.png" width="400px" height="400px">
+            <h1 id="front-heading">For  <input id="front-input" type="number" min="2021" max="3000" placeholder="2020"></h1>
+          </div>
+        </div>
+      </div>
+      <div id="inside" class="main-div">
+        <div id="insile-l" class="inside-page page1">
+          <figure>
+            <img id="img-i" src="https://5.imimg.com/data5/XP/KT/MY-3209555/multi-colour-sky-shot-fireworks-nagin-crackers-500x500.jpg" width="400px" height="700px">
+            <figcaption>sky shot fireworks</figcaption>
+          </figure>
+        </div>
+        <div id="inside-r" class="inside-page page2">
+          <div id="inside-quote">
+            <div class="quotes-i">
+              <h1 id="quote-h" class="quotes-heading">The New Year</h1>
+              <p id="quote-p" class="quotes-paragraph">A time to say goodbye<br> and <br>a time to say hello.<br><br><br>My wishes are always with you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="back" class="main-div">
+        <div id="back-container">
+          <textarea rows="4" cols-"10" placeholder="Some extra text..."></textarea>
+          <h2 id="back-heading">From <input id="back-input1" class="input-b" type="text" pattern="[A-Za-z]" placeholder="Sender's name"> <br>To <input id="front-input2" class="input-b" type="text" pattern="[A-Za-z]" placeholder="Receiver's name"></h2>
+        </div>
+      </div>
+    </div>
+      
+  </main>
+<style>
+  header{
+    width: 100vw;
+    height: auto;
+    background-color: red;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    top: -80px;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+  }
+  #container{
+    width: 100vw;
+    height: 100vh;
+  }
+  .main-div{
+    width: 500px;
+    height: 800px;
+    border: 1px solid black;
+    position: absolute;
+    margin: auto;
+  }
+  input{
+    border: none;
+    background-color: transparent;
+    font-family:  'Brush Script MT', cursive;
+  }
+  textarea{
+    width: 50%;
+    height: 200px;
+    margin: 30% 25% 10% 25%;
+    border: 5px dashed;
+    font-family:  'Brush Script MT', cursive;
+    font-size: 28px;
+  }
+  #front{
+    border: 1px solid;
+    left: 100px;
+  }
+  #inside{
+    border: 1px solid;
+    width: 1000px;
+    left: -10000px;
+  }
+  .inside-page{
+    width: 50%;
+    height: 100%;
+    border: 1px solid;
+    position: absolute;
+    top: 0;
+  }
+  .page1{
+    left: 0;
+  }
+  .page2{
+    left: 50%;
+  }
+  #back{
+    border: 1px solid;
+    left: -10000px;
+  }
+
+  #front-container{
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255,215,0,0.2);
+    margin: 15% auto;
+  }
+  #img-f{
+    border-radius: 50%;
+    position: relative;
+    padding-top: 30%;
+
+  }
+  #front-heading{
+    text-align: right;
+    color: rgba(127,100,295,0.9);
+  }
+  #front-input{
+    font-size: 50px;
+    color: rgba(127,100,295,0.9);
+  }
+
+  #img-i{
+    margin: 5% auto;
+  }
+  figcaption{
+    visibility: hidden;
+    text-align: right;
+  }
+  #inside-quote{
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255,215,0,0.2);
+    margin: 15% auto;
+  }
+  .quotes-i{
+    padding-top: 40%;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+  }
+  .quotes-heading{
+    font-size: 60px;
+    word-wrap: normal;
+  }
+  .quotes-paragraph{
+    font-size: 35px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-decoration: underline;
+  }
+  .input-b{
+    font-size: 40px;
+    width: auto;
+  }
+  #back-heading{
+    text-align: right;
+  }
+
+</style>
+<script>
+  function frontSide(){
+    document.getElementById("front").style.left= "52%"; document.getElementById("inside").style.left="-10000px";
+    document.getElementById("back").style.left="-10000px";
+  }
+
+  function insideSide(){
+    document.getElementById("inside").style.left= "12%"; document.getElementById("front").style.left="-10000px";
+    document.getElementById("back").style.left="-10000px";
+  }
+
+  function backSide(){
+    document.getElementById("back").style.left= "12%"; document.getElementById("inside").style.left="-10000px";
+    document.getElementById("front").style.left="-10000px";
+  }
+
+  function pageAnime(){
+    setTimeout(frontSide,100);
+    setTimeout(insideSide,1500);
+    setTimeout(backSide,4000);
+    setTimeout(frontSide,6000);
+  }
+</script>
+</body>
+</html>
