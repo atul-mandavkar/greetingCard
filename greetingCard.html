@@ -7,7 +7,7 @@
 </head>
 <body  onload="pageAnime()">
   <main>
-    <header>
+    <header id="greeting-bar">
       <h1>Greeting card for new years</h1>
       <div id="header-container">
         <nav id="header-nav">
@@ -180,6 +180,7 @@
   function frontSide(){
     document.getElementById("front").style.left= "52%"; document.getElementById("inside").style.left="-10000px";
     document.getElementById("back").style.left="-10000px";
+    document.getElementById("greeting-bar").style.display="none";
   }
 
   function insideSide(){
@@ -192,11 +193,18 @@
     document.getElementById("front").style.left="-10000px";
   }
 
+function frontSide2(){
+  document.getElementById("front").style.left= "52%"; document.getElementById("inside").style.left="-10000px";
+  document.getElementById("back").style.left="-10000px";
+  
+  document.getElementById("greeting-bar").style.display="block";
+}
+
   function pageAnime(){
     setTimeout(frontSide,100);
     setTimeout(insideSide,1500);
     setTimeout(backSide,4000);
-    setTimeout(frontSide,6000);
+    setTimeout(frontSide2,6000);
   }
 </script>
 </body>
